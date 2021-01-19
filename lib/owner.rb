@@ -67,7 +67,15 @@ class Owner
   end
   
   def sell_pets
-   self.
+    
+    pets = self.dogs + self.cats
+
+    pets.each do |pet|
+       
+    pet.mood = "nervous"
+     
+    pet.owner = nil
+   
   end 
   
     #   describe "#sell_pets" do
@@ -90,7 +98,7 @@ class Owner
 
     #     @owner.sell_pets
 
-    #     [fido, tabby].each { |o| expect(o.owner).to be(nil) }
+    #     [fido, tabby].each { |o| expect(o.owner).to be(****nil) }
     #     expect(@owner.cats.count).to eq(0)
     #     expect(@owner.dogs.count).to eq(0)
     #   end
@@ -98,7 +106,8 @@ class Owner
 
   
   def list_pets
-    "I have #{@owner.dogs.count} dog(s), and #{@owner.cats.count} cat(s)."
+    #"I have #{@owner.dogs.count} dog(s), and #{@owner.cats.count} cat(s)."
+     "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
   end  
   
       # describe "#list_pets" do
