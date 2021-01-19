@@ -40,5 +40,37 @@ class Owner
     self.all.clear
   end
   
+  def cats
+    Cat.all.select{|cat| cat.owner == self}
+  end
+  
+  def dogs
+    Dog.all.select{|dog| dog.owner == self}
+  end
+  
+  def buy_cat(name)
+    Cat.new(name, self)
+  end
+  
+  def buy_dog(name)
+    Dog.new(name, self)
+  end
+  
+  def walk_dogs
+    
+    dog.mood.self = "happy"
+  end  
+  
+  def feed_cats
+  cat.mood.self = "happy"
+  end
+  
+  def sell_pets
+  
+  end 
+  
+  def list_pets
+  
+  end  
   
 end
